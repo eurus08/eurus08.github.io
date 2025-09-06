@@ -1,0 +1,14 @@
+/* Nav Bar Style */
+.pages a {
+  color: #000;
+  /* default link colour */
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.pages a:hover {
+  color: #3D3B40;
+  border-bottom: 5px solid #3D3B40;
+  /* underline effect */
+
+}
