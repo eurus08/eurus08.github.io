@@ -17,6 +17,8 @@ nav{
   border-bottom: 1px solid #bfbfbf;
 }
 
+
+/* Side bar style */
 .list{
     list-style-type: none;
     margin: 2rem 0px 0px 0px;
@@ -30,4 +32,9 @@ nav{
     padding: 5px;
     border: 1px solid #bfbfbf;
     margin: 0px 0px 0px 5px;
+}
+
+.icon > img{
+    width: 1rem;
+    height: 1rem;
 }
