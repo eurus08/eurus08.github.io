@@ -16,3 +16,9 @@
 nav{
   border-bottom: 1px solid #bfbfbf;
 }
+
+.list{
+    list-style-type: none;
+    margin: 2rem 0px 0px 0px;
+    padding: 0px;
+}
