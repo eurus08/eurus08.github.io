@@ -22,3 +22,12 @@ nav{
     margin: 2rem 0px 0px 0px;
     padding: 0px;
 }
+
+.profile{
+    /* max-width: 150px; */
+    width: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #bfbfbf;
+    margin: 0px 0px 0px 5px;
+}
