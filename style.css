@@ -42,6 +42,8 @@ nav{
     text-decoration: underline;
 }
 
+
+
 .profile{
     /* max-width: 150px; */
     width: 100px;
@@ -52,6 +54,7 @@ nav{
 }
 
 .icon > img{
+  margin-left: 5px;
     width: 1rem;
     height: 1rem;
 }

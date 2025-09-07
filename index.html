@@ -59,7 +59,9 @@
             <!-- Sidebar -->
             <side class="col-md-3 col-lg-3 bg-light p-4 sticky-top" style="height: fit-content;">
 
-                <div class="text-center">
+
+                <!-- Desktop / Tablet View -->
+                <div class="d-none d-md-block text-center">
                     <img src="/images/Profile.jpg" alt="Profile picture" class="img-fluid profile">
                     <h4 class="fw-bold">Prince Asumadu</h4>
                     <p class="text-muted small">
@@ -67,27 +69,78 @@
                     </p>
 
                     <ul class="list">
-                        <li><span class="icon"><img src="./images/svg/location.svg" alt="location"></span>
+                        <li><span class="icon"><img src="/images/svg/location.svg" alt="location"></span>
                             Kumasi, Ghana
                         </li>
                         <li><a href="mailto:pasumadu6@st.knust.edu.gh">
                                 <span class="icon"><img src="/images/svg/email.svg" alt="email"></span>
                                 Email</a></li>
                         <li><a href="https://www.linkedin.com/in/eurus08">
-                                <span class="icon"><img src="./images/svg/linkedin.svg" alt="linkedin"></span>
+                                <span class="icon"><img src="/images/svg/linkedin.svg" alt="linkedin"></span>
                                 LinkedIn</a></li>
                         <li><a href="https://github.com/eurus08">
-                            <span class="icon"><img src="./images/svg/github.svg" alt="github"></span>
-                            GitHub</a></li>
-                        <li><a href="https://t.me/eurus08"> 
-                            <span class="icon"><img src="./images/svg/telegram.svg" alt="telegram"></span>
-                            Telegram</a></li>
-                        <li draggable="true"><span class="icon"><img src="./images/svg/phone.svg" alt="phone"></span>
+                                <span class="icon"><img src="/images/svg/github.svg" alt="github"></span>
+                                GitHub</a></li>
+                        <li><a href="https://t.me/eurus08">
+                                <span class="icon"><img src="/images/svg/telegram.svg" alt="telegram"></span>
+                                Telegram</a></li>
+                        <li draggable="true"><span class="icon"><img src="/images/svg/phone.svg" alt="phone"></span>
                             +233 548 247 098</li>
                     </ul>
                 </div>
 
+
+                <!-- Mobile View -->
+                <div class="d-md-none">
+                    <div class="d-flex align-items-center">
+                        <img src="images/Profile.jpg" alt="Profile picture" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px;">
+                        <div>
+                            <h6 class="mb-0">Prince Asumadu</h6>
+                            <small class="text-muted">
+                                Graduate Student
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Contact Button with Dropdown -->
+                    <div class="mt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contact
+                            </button>
+                           <ul class="dropdown-menu list">
+                        <li><span class="icon"><img src="/images/svg/location.svg" alt="location"></span>
+                            Kumasi, Ghana
+                        </li>
+                        <li><a href="mailto:pasumadu6@st.knust.edu.gh">
+                                <span class="icon"><img src="/images/svg/email.svg" alt="email"></span>
+                                Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/eurus08">
+                                <span class="icon"><img src="/images/svg/linkedin.svg" alt="linkedin"></span>
+                                LinkedIn</a></li>
+                        <li><a href="https://github.com/eurus08">
+                                <span class="icon"><img src="/images/svg/github.svg" alt="github"></span>
+                                GitHub</a></li>
+                        <li><a href="https://t.me/eurus08">
+                                <span class="icon"><img src="/images/svg/telegram.svg" alt="telegram"></span>
+                                Telegram</a></li>
+                        <li draggable="true"><span class="icon"><img src="/images/svg/phone.svg" alt="phone"></span>
+                            +233 548 247 098</li>
+                    </ul>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
             </side>
+
 
             <!-- Spacer -->
             <space class="col-lg-1 bg-dark"></space>
@@ -103,8 +156,10 @@
     <!-- [x] Populate sidebar -->
     <!-- [x] Edit and add temp profile pic -->
     <!-- [x] Add social media links -->
-    <!-- TODO Style Social links and add svgs -->
+    <!-- [x] Style Social links and add svgs -->
+    <!-- FIXME make contact button go to the side -->
     <!-- TODO Edit media for mobile screens -->
+    <!-- TODO Add side bar to all pages  -->
 
 
 
