@@ -58,3 +58,8 @@ nav{
     width: 1rem;
     height: 1rem;
 }
+
+
+body {
+  background-color: #f0f0f0; /* light grey just to test */
+}
