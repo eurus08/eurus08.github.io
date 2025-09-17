@@ -61,11 +61,6 @@ nav {
 }
 
 
-body {
-  background-color: #f0f0f0;
-  /* light grey just to test */
-}
-
 
 /* Minimalist styling for slideshow */
 .carousel-item img {
@@ -87,4 +82,15 @@ body {
 .page_title{
   color: #212121;
   padding: 2px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.text li{
+  font-size: 1.5rem;
 }
