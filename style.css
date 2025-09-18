@@ -66,31 +66,23 @@ nav {
 .carousel-item img {
   /* border-radius: 12px; */
   /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%;
+  height: auto;
   /* max-height: 400px; */
   background: transparent;
   margin-bottom: 2rem;
   /* object-fit: contain; */
 }
 
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
-} */
 
-.page_title{
+.page_title {
   color: #212121;
   padding: 2px;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-.text{
-    font-size: 1.5rem;
-    text-align: start;
-}
-
-.text li{
+.text {
   font-size: 1.5rem;
+  text-align: start;
 }
