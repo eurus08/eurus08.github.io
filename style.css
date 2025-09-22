@@ -79,3 +79,22 @@ nav {
 #footer-sec {
   background-color: #212121;
 }
+
+
+/* Styles for skills page */
+.level-bar {
+  display: flex;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.level-bar div {
+  flex: 1;
+  height: 12px;
+  border-radius: 3px;
+  background: #e9ecef;
+}
+
+.level-bar .filled {
+  background: #0d6efd;
+}
