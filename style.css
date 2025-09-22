@@ -1,7 +1,6 @@
 /* Nav Bar Style */
 .pages a {
   color: #000;
-  /* default link colour */
   text-decoration: none;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
@@ -10,8 +9,8 @@
   color: #3D3B40;
   border-bottom: 5px solid #3D3B40;
   /* underline effect */
-
 }
+
 
 nav {
   border-bottom: 1px solid #bfbfbf;
@@ -27,7 +26,6 @@ nav {
 
 .list li {
   margin-bottom: 15px;
-  /* display: flex; */
   display: table;
   gap: 5px;
 }
@@ -46,7 +44,6 @@ nav {
 
 
 .profile {
-  /* max-width: 150px; */
   width: 100px;
   border-radius: 50%;
   padding: 5px;
@@ -60,20 +57,12 @@ nav {
   height: 1rem;
 }
 
-
-
-/* Minimalist styling for slideshow */
 .carousel-item img {
-  /* border-radius: 12px; */
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
   max-width: 100%;
   height: auto;
-  /* max-height: 400px; */
   background: transparent;
   margin-bottom: 2rem;
-  /* object-fit: contain; */
 }
-
 
 .page_title {
   color: #212121;
@@ -85,4 +74,8 @@ nav {
 .text {
   font-size: 1.5rem;
   text-align: start;
+}
+
+#footer-sec {
+  background-color: #212121;
 }
