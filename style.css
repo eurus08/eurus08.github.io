@@ -98,3 +98,15 @@ nav {
 .level-bar .filled {
   background: #212121;
 }
+
+
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card .collapse.show {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
