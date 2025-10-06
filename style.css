@@ -110,3 +110,84 @@ nav {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transform: scale(1.02);
 }
+
+
+/* style for misc page */
+
+/* ========== Fun Facts Section (with Images) ========== */
+/* #fun-facts {
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fun-card {
+    height: 350px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.fun-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+.fun-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fun-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.fun-card:hover img {
+    transform: scale(1.1);
+}
+
+.fun-card:hover .overlay {
+    opacity: 1;
+} */
+
+/* Responsive tweaks */
+/* @media (min-width: 992px) {
+    #fun-facts .col-lg-5 {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+} */
+
+
+
+/* Fun Facts Section (Alternating Layout) */
+#fun-facts {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+#fun-facts img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#fun-facts img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Space between alternating rows */
+#fun-facts .row + .row {
+  margin-top: 4rem;
+}
+
+
+
+
