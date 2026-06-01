@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Skills of Prince Asumadu — high-performance computing, database design, machine learning, data visualisation, programming languages and research.">
     <title>Skills - Prince Asumadu</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="/style.css">
 
     <!-- link to bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -26,122 +31,22 @@
 
 <body>
 
-
-    <!-- Header Section -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
-        <div class="container">
-            <!-- Brand / Logo -->
-            <a class="navbar-brand fs-3 fw-bold" href="/index.html">Prince Asumadu</a>
-
-            <!-- Toggle button for small screens -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Links -->
-            <div class="collapse navbar-collapse justify-content-end pages" id="navbarNav">
-                <ul class="navbar-nav fs-5">
-                    <li class="nav-item"><a href="/index.html" class="nav-link active mx-2" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item"><a href="/pages/skills.html" class="nav-link mx-2">Skills</a></li>
-                    <li class="nav-item"><a href="/resume/PA_Resume.pdf" class="nav-link mx-2">CV</a></li>
-                    <li class="nav-item"><a href="/pages/misc.html" class="nav-link mx-2">Mics</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
+    <!-- Header Section (shared partial) -->
+    <header id="site-nav"></header>
 
     <!-- Main Body -->
     <div class="container my-5">
         <div class="row">
 
-            <!-- Sidebar -->
-            <aside class="col-md-3 col-lg-3 p-4 ">
-
-
-                <!-- Desktop / Tablet View -->
-                <div class="d-none d-md-block text-center sticky-top">
-                    <img src="/images/Profile.jpg" alt="Profile picture" class="img-fluid profile">
-                    <h4 class="fw-bold">Prince Asumadu</h4>
-                    <p class="text-muted small">
-                        Graduate Student
-                    </p>
-
-                    <ul class="list">
-                        <li><span class="icon"><img src="/images/svg/location.svg" alt="location"></span>
-                            Kumasi, Ghana
-                        </li>
-                        <li><a href="mailto:pasumadu6@st.knust.edu.gh">
-                                <span class="icon"><img src="/images/svg/email.svg" alt="email"></span>
-                                Email</a></li>
-                        <li><a href="https://www.linkedin.com/in/eurus08">
-                                <span class="icon"><img src="/images/svg/linkedin.svg" alt="linkedin"></span>
-                                LinkedIn</a></li>
-                        <li><a href="https://github.com/eurus08">
-                                <span class="icon"><img src="/images/svg/github.svg" alt="github"></span>
-                                GitHub</a></li>
-                        <li><a href="https://t.me/eurus08">
-                                <span class="icon"><img src="/images/svg/telegram.svg" alt="telegram"></span>
-                                Telegram</a></li>
-                        <li draggable="true"><span class="icon"><img src="/images/svg/phone.svg" alt="phone"></span>
-                            +233 548 247 098</li>
-                    </ul>
-                </div>
-
-
-
-                <!-- Mobile View (Non-sticky) -->
-                <div class="d-md-none">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="/images/Profile.jpg" alt="Profile picture" class="rounded-circle me-3"
-                                style="width: 60px; height: 60px;">
-                            <div>
-                                <h6 class="mb-0">Prince Asumadu</h6>
-                                <small class="text-muted">Graduate Student</small>
-                            </div>
-                        </div>
-
-                        <!-- Right: Contact Button with Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Contact</button>
-                            <ul class="dropdown-menu list dropdown-menu-end">
-                                <li><span class="icon"><img src="/images/svg/location.svg" alt="location"></span>
-                                    Kumasi, Ghana</li>
-                                <li><a href="mailto:pasumadu6@st.knust.edu.gh">
-                                        <span class="icon"><img src="/images/svg/email.svg" alt="email"></span>
-                                        Email</a></li>
-                                <li><a href="https://www.linkedin.com/in/eurus08">
-                                        <span class="icon"><img src="/images/svg/linkedin.svg" alt="linkedin"></span>
-                                        LinkedIn</a></li>
-                                <li><a href="https://github.com/eurus08">
-                                        <span class="icon"><img src="/images/svg/github.svg" alt="github"></span>
-                                        GitHub</a></li>
-                                <li><a href="https://t.me/eurus08">
-                                        <span class="icon"><img src="/images/svg/telegram.svg" alt="telegram"></span>
-                                        Telegram</a></li>
-                                <li draggable="true"><span class="icon"><img src="/images/svg/phone.svg"
-                                            alt="phone"></span> +233 548 247 098</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </aside>
-
-
+            <!-- Sidebar (shared partial) -->
+            <aside id="site-sidebar" class="col-md-3 col-lg-3 p-4"></aside>
 
             <!-- Spacer -->
-            <space class="col-lg-1"></space>
+            <div class="col-lg-1"></div>
 
             <!-- Main Content -->
             <main class="col-md-8 col-lg-8 p-4 bg-body-secondary rounded">
                 <h2 class="fw-bold mb-4">Skills</h2>
-
 
                 <!-- Expertise Cards: -->
                 <section class="mb-5">
@@ -163,7 +68,7 @@
                                     <a data-bs-toggle="collapse" href="#hpcDesc" role="button"
                                         class="text-decoration-none">
                                         <div class="position-relative">
-                                            <img src="/images/cards/hpc1.jpg" class="card-img-top w-100"
+                                            <img src="/images/cards/hpc1.jpg" alt="" class="card-img-top w-100"
                                                 style="filter: blur(1px); object-fit: cover; height: 200px;">
                                             <div
                                                 class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
@@ -175,7 +80,7 @@
                                     </a>
                                     <div class="collapse" id="hpcDesc" data-bs-parent="#skillsAccordion">
                                         <div class="card-body">
-                                            Experience with distributed systems, and parallel parallel programming
+                                            Experience with distributed systems and parallel programming
                                             for solving large-scale scientific problems on clusters and GPUs.
                                         </div>
                                     </div>
@@ -188,7 +93,7 @@
                                     <a data-bs-toggle="collapse" href="#dbDesc" role="button"
                                         class="text-decoration-none">
                                         <div class="position-relative">
-                                            <img src="/images/cards/db1.jpg" class="card-img-top w-100"
+                                            <img src="/images/cards/db1.jpg" alt="" class="card-img-top w-100"
                                                 style="filter: blur(1px); object-fit: cover; height: 200px;">
                                             <div
                                                 class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
@@ -200,7 +105,7 @@
                                     </a>
                                     <div class="collapse" id="dbDesc" data-bs-parent="#skillsAccordion">
                                         <div class="card-body">
-                                            Experience schema design, normalization, indexing, and PostgreSQL Database
+                                            Experienced in schema design, normalization, indexing, and PostgreSQL Database
                                             administration.
                                         </div>
                                     </div>
@@ -213,7 +118,7 @@
                                     <a data-bs-toggle="collapse" href="#mlDesc" role="button"
                                         class="text-decoration-none">
                                         <div class="position-relative">
-                                            <img src="/images/cards/ml2.jpeg" class="card-img-top w-100"
+                                            <img src="/images/cards/ml2.jpeg" alt="" class="card-img-top w-100"
                                                 style="filter: blur(1px); object-fit: cover; height: 200px;">
                                             <div
                                                 class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
@@ -233,14 +138,13 @@
                                 </div>
                             </div>
 
-
                             <!-- Card 4-->
                             <div class="col-md-4">
                                 <div class="card shadow-sm border-0 skill-card">
                                     <a data-bs-toggle="collapse" href="#vizDesc" role="button"
                                         class="text-decoration-none">
                                         <div class="position-relative">
-                                            <img src="/images/cards/dv.png" class="card-img-top w-100"
+                                            <img src="/images/cards/dv.png" alt="" class="card-img-top w-100"
                                                 style="filter: blur(1px); object-fit: cover; height: 200px;">
                                             <div
                                                 class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
@@ -252,12 +156,11 @@
                                     </a>
                                     <div class="collapse" id="vizDesc" data-bs-parent="#skillsAccordion">
                                         <div class="card-body">
-                                            Skilled in creating interactive visualisations using Python and Tabueu
+                                            Skilled in creating interactive visualisations using Python and Tableau
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
 
                             <!-- Card 5-->
                             <div class="col-md-4">
@@ -265,7 +168,7 @@
                                     <a data-bs-toggle="collapse" href="#wbDesc" role="button"
                                         class="text-decoration-none">
                                         <div class="position-relative">
-                                            <img src="/images/cards/wb.jpg" class="card-img-top w-100"
+                                            <img src="/images/cards/wb.jpg" alt="" class="card-img-top w-100"
                                                 style="filter: blur(1px); object-fit: cover; height: 200px;">
                                             <div
                                                 class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
@@ -283,14 +186,13 @@
                                 </div>
                             </div>
 
-
                             <!-- Card 6 -->
                             <div class="col-md-4">
                                 <div class="card shadow-sm border-0 skill-card">
                                     <a data-bs-toggle="collapse" href="#resDesc" role="button"
                                         class="text-decoration-none">
                                         <div class="position-relative">
-                                            <img src="/images/cards/res.jpg" class="card-img-top w-100"
+                                            <img src="/images/cards/res.jpg" alt="" class="card-img-top w-100"
                                                 style="filter: blur(1px); object-fit: cover; height: 200px;">
                                             <div
                                                 class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
@@ -314,7 +216,6 @@
                     </div>
 
                 </section>
-
 
                 <!-- Programming Languages -->
                 <section class="mb-5">
@@ -379,11 +280,11 @@
                             <div class="filled"></div>
                             <div></div>
                         </div>
-                        <small class="text-muted">Advances (4+ years)</small>
+                        <small class="text-muted">Advanced (4+ years)</small>
                     </div>
 
                     <div class="mb-3">
-                        <label class="fw-bold">LaTex</label>
+                        <label class="fw-bold">LaTeX</label>
                         <div class="level-bar">
                             <div class="filled"></div>
                             <div class="filled"></div>
@@ -449,65 +350,21 @@
         </div>
     </div>
 
+    <!-- Footer (shared partial) -->
+    <div id="site-footer"></div>
 
-    <!-- Footer  -->
-    <div id="footer-sec" class="bg-dark text-white py-lg-3">
-        <div class="container">
-            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center py-4">
-                <!-- Left: Text -->
-                <p class="mb-0">© 2025 Prince Asumadu.</p>
-
-                <!-- Right: Icons -->
-                <ul class="list-unstyled d-flex mb-0">
-                    <li class="ms-3">
-                        <a class="text-white" href="https://t.me/eurus08" aria-label="Telegram">
-                            <i class="bi bi-telegram" style="font-size: 1.5rem;"></i>
-                        </a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-white" href="https://discord.com/users/eurus08" aria-label="Instagram">
-                            <i class="bi bi-discord" style="font-size: 1.5rem;"></i>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Bootstrap Script -->
+    <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- Auto-scroll script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const collapses = document.querySelectorAll('#skillsAccordion .collapse');
+    <!-- Shared partial loader -->
+    <script src="/includes.js"></script>
 
-            collapses.forEach(collapse => {
-                collapse.addEventListener('shown.bs.collapse', function () {
-                    const card = collapse.closest('.card');
-                    const rect = card.getBoundingClientRect();
-
-                    const fullyVisible =
-                        rect.top >= 0 &&
-                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-
-                    if (!fullyVisible) {
-                        card.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'center'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Page script: auto-scroll expanded skill cards -->
+    <script src="/pages/skills.js"></script>
 </body>
 
 </html>
 
-
 <!-- TODO Add Tableau and links-->
-<!-- TODO Remove script to js file -->
