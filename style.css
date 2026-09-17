@@ -189,5 +189,82 @@ nav {
 }
 
 
+/* ========== Homepage hero ========== */
+.editorial-headline {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.2vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -.01em;
+}
+
+.node-graphic line {
+  stroke: #c7ccd1;
+  stroke-width: 1.5;
+}
+
+.node-graphic .route {
+  stroke: #2f6690;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.node-graphic circle {
+  fill: #fff;
+  stroke: #3D3B40;
+  stroke-width: 1.5;
+}
+
+.node-graphic circle.on-route {
+  fill: #2f6690;
+  stroke: #2f6690;
+}
+
+.about-copy {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #3a3a3a;
+  text-align: start;
+}
+
+.topic-tag {
+  display: inline-block;
+  border: 1px solid #c7ccd1;
+  border-radius: 999px;
+  padding: .35rem .9rem;
+  font-size: .85rem;
+  margin: .25rem .25rem .25rem 0;
+  color: #333;
+  background: #fff;
+}
+
+.demo-thumb-link {
+  display: block;
+  cursor: pointer;
+}
+
+.demo-thumb-link svg {
+  display: block;
+  transition: filter .2s ease;
+}
+
+.demo-thumb-link:hover svg {
+  filter: brightness(1.12);
+}
+
+.demo-chip {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(20, 24, 31, .75);
+  color: #ffc24b;
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  font-size: .7rem;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  letter-spacing: .03em;
+}
+
+
 
 
