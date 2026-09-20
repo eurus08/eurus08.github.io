@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:wght@600;700&display=swap"
         rel="stylesheet">
 
 </head>
@@ -46,10 +46,23 @@
 
             <!-- Main Content -->
             <main class="col-md-8 col-lg-8 p-4">
-                <h2 class="page_title">Projects</h2>
 
-                <p class="text-muted">Content coming soon.</p>
-            </main>
+<h2 class="page_title serif">Projects</h2>
+<div class="mb-4"><a class="topic-tag text-decoration-none" href="#cases">Case studies</a><a class="topic-tag text-decoration-none" href="#software">Software</a></div>
+<section id="cases"><div class="panel mb-4"><div class="row g-4 align-items-center"><div class="col-md-5"><div class="thumb"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Evacuation graph">
+<rect width="400" height="200" fill="#f5f7f9"/><g stroke="#c7ccd1" stroke-width="1.5"><line x1="40" y1="150" x2="100" y2="80"/><line x1="100" y1="80" x2="160" y2="120"/><line x1="160" y1="120" x2="220" y2="60"/><line x1="220" y1="60" x2="280" y2="110"/><line x1="280" y1="110" x2="340" y2="70"/><line x1="100" y1="80" x2="140" y2="40"/><line x1="160" y1="120" x2="210" y2="165"/></g>
+<polyline points="40,150 100,80 160,120 220,60 280,110 340,70" fill="none" stroke="#2f6690" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="40" cy="150" r="6" fill="#212121"/><g fill="#fff" stroke="#3D3B40" stroke-width="1.5"><circle cx="100" cy="80" r="5"/><circle cx="160" cy="120" r="5"/><circle cx="220" cy="60" r="5"/><circle cx="280" cy="110" r="5"/></g>
+<rect x="330" y="60" width="20" height="20" rx="4" fill="#e6f4ec" stroke="#2e7d5b" stroke-width="1.5"/></svg></div></div>
+<div class="col-md-7"><p class="meta mb-1"><b>2023</b> &middot; Network optimisation &middot; Dijkstra's algorithm</p><h3 class="serif h4 mb-2">Dynamic Evacuation Plan Model</h3><p class="about-copy mb-2" style="font-size:.95rem">Recomputes safe exits in real time when corridors in a KNUST building complex are blocked.</p>
+<p class="mb-3"><span class="topic-tag mb-0">43 nodes &middot; 9 exits</span></p><div class="d-flex flex-wrap gap-2"><a class="btn btn-sm btn-dark" href="/pages/projects/evacuation.html">View project &rarr;</a> <a class="btn btn-sm btn-outline-dark" href="/pages/projects/evacuation.html#live-demo">Live demo</a> <a class="btn btn-sm btn-outline-dark" href="https://github.com/eurus08/dijkstra_alg_code" target="_blank" rel="noopener">Code &#8599;</a></div></div></div></div><div class="panel mb-4"><div class="row g-4 align-items-center"><div class="col-md-5"><div class="thumb"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Schematic of five time periods kept under a 40-minute cap">
+<rect width="400" height="200" fill="#f5f7f9"/><rect x="50" y="45" width="40" height="105" rx="3" fill="#2f6690"/><rect x="110" y="48" width="40" height="102" rx="3" fill="#2f6690"/><rect x="170" y="42" width="40" height="108" rx="3" fill="#2f6690"/><rect x="230" y="48" width="40" height="102" rx="3" fill="#2f6690"/><rect x="290" y="45" width="40" height="105" rx="3" fill="#2f6690"/><line x1="30" y1="30" x2="370" y2="30" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5 4"/><text x="34" y="24" font-family="Roboto,sans-serif" font-size="11" fill="#c0392b">40 min cap</text><line x1="30" y1="150" x2="370" y2="150" stroke="#c7ccd1"/></svg></div></div>
+<div class="col-md-7"><p class="meta mb-1"><b>2024</b> &middot; Linear programming &middot; Primal simplex</p><h3 class="serif h4 mb-2">Optimal Task Allocation</h3><p class="about-copy mb-2" style="font-size:.95rem">Assigns KNUST cleaning-staff tasks across time periods to minimise the longest period.</p>
+<p class="mb-3"><span class="topic-tag mb-0">5 periods &middot; 174 min</span></p><div class="d-flex flex-wrap gap-2"><a class="btn btn-sm btn-dark" href="/pages/projects/task-allocation.html">View project &rarr;</a> <a class="btn btn-sm btn-outline-dark" href="/reports/task-allocation.pdf" target="_blank" rel="noopener">Report (PDF)</a></div></div></div></div></section>
+<section id="software" class="mt-5"><h3 class="serif h4 mb-3">Software</h3>
+<div class="panel d-flex flex-wrap justify-content-between align-items-start gap-3"><div><b>hpc-kernels</b> <span class="meta">C &middot; OpenMP &middot; MPI &middot; CUDA</span><p class="about-copy mb-1" style="font-size:.95rem">Reduction, matmul, mat-vec, Gaussian elimination, transpose and Jacobi across serial, OpenMP, MPI and CUDA; checked against NumPy/SciPy and benchmarked in GFLOP/s and GB/s.</p></div><a class="btn btn-sm btn-outline-dark" href="https://github.com/eurus08/hpc-kernels" target="_blank" rel="noopener">GitHub &#8599;</a></div>
+</section>
+</main>
 
         </div>
     </div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dynamic Evacuation Plan Model for Aboagye Menyah Complex at KNUST — a network-optimisation project by Prince Asumadu using Dijkstra's algorithm to recompute safe evacuation routes when corridors are blocked.">
+    <title>Dynamic Evacuation Plan Model - Prince Asumadu</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- link to bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- link to font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:wght@600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header Section (shared partial) -->
+    <header id="site-nav"></header>
+
+    <!-- Main Body -->
+    <div class="container my-5">
+        <div class="row">
+
+            <!-- Sidebar (shared partial) -->
+            <aside id="site-sidebar" class="col-md-3 col-lg-3 p-4"></aside>
+
+            <!-- Spacer -->
+            <div class="col-lg-1"></div>
+
+            <!-- Main Content -->
+            <main class="col-md-8 col-lg-8 p-4">
+
+                <p class="text-uppercase text-muted small mb-1" style="letter-spacing:.08em;">Network Optimisation
+                    &middot; Dijkstra's Algorithm</p>
+                <h2 class="page_title mt-0">Dynamic Evacuation Plan Model for Aboagye Menyah Complex at KNUST</h2>
+                <p class="text-muted small mb-4">BSc Project &middot; Department of Mathematics, KNUST &middot;
+                    with Alfreda Ofori Appiah &middot; Supervisor: Prof. Peter Amoako-Yirenkyi &middot; August 2023
+                </p>
+
+                <!-- Abstract -->
+                <section class="mb-4">
+                    <h3 class="h5 fw-bold">Abstract</h3>
+                    <p class="about-copy">
+                        Safely evacuating people from a complex building during an emergency is a critical
+                        public-safety problem, and most existing evacuation plans rely on a single fixed route
+                        that can't adapt if that route becomes blocked. This project builds a detailed network
+                        model of the Aboagye Menyah Complex at KNUST &mdash; 43 nodes across a basement and four
+                        floors, including 9 marked exits &mdash; and formulates two optimisation problems over
+                        it: an <em>offline</em> model that finds the shortest route from any intersection to any
+                        exit, and a <em>dynamic</em> model that recomputes the shortest route around a set of
+                        blocked nodes in real time. Both are solved with Dijkstra's algorithm.
+                    </p>
+                </section>
+
+                <!-- Methodology -->
+                <section class="mb-4">
+                    <h3 class="h5 fw-bold">Methodology</h3>
+                    <p class="about-copy">
+                        The network was built from real measured distances between adjacent intersections,
+                        stairwells, and exits. The offline optimisation model minimises total distance from a
+                        source node to a destination node subject to flow-conservation constraints, giving a
+                        static evacuation plan for the whole building. The dynamic model solves the same problem
+                        while excluding a set of real-time blocked nodes, so it always returns a valid alternate
+                        route around an obstruction instead of defaulting to the original, now-invalid path.
+                    </p>
+                </section>
+
+                <!-- Key result -->
+                <section class="mb-5">
+                    <h3 class="h5 fw-bold">Key result</h3>
+                    <p class="about-copy">
+                        Across two independent blocked-node scenarios, the dynamic model successfully
+                        recomputed a valid alternate route to the requested exit in every test case &mdash;
+                        never simply returning the original, now-invalid route.
+                    </p>
+                </section>
+
+                <!-- Live demo -->
+                <section class="mb-4" id="live-demo">
+                    <h3 class="h5 fw-bold mb-2">Live demo</h3>
+                    <div class="rounded overflow-hidden shadow-sm">
+                        <iframe src="/pages/projects/evacuation-router.html" style="width:100%; min-height:640px; border:0;"
+                            loading="lazy" title="Dynamic Evacuation Router — interactive demo"></iframe>
+                    </div>
+                    <a href="/pages/projects/evacuation-router.html" target="_blank" rel="noopener"
+                        class="small">Open full-screen &#8599;</a>
+                </section>
+
+                <!-- Links -->
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <a href="/reports/evacuation-plan.pdf" target="_blank" rel="noopener"
+                        class="btn btn-dark">Full report (PDF)</a>
+                    <a href="https://github.com/eurus08/dijkstra_alg_code" target="_blank" rel="noopener"
+                        class="btn btn-outline-dark">Code on GitHub</a>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Footer (shared partial) -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Shared partial loader -->
+    <script src="/includes.js"></script>
+</body>
+
+</html>

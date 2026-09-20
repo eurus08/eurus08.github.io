@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Optimal Task Allocation using Modified Primal Simplex for KNUST Cleaning Staff — a linear-programming project by Prince Asumadu and Osman Inusah.">
+    <title>Optimal Task Allocation - Prince Asumadu</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- link to bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- link to font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:wght@600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header Section (shared partial) -->
+    <header id="site-nav"></header>
+
+    <!-- Main Body -->
+    <div class="container my-5">
+        <div class="row">
+
+            <!-- Sidebar (shared partial) -->
+            <aside id="site-sidebar" class="col-md-3 col-lg-3 p-4"></aside>
+
+            <!-- Spacer -->
+            <div class="col-lg-1"></div>
+
+            <!-- Main Content -->
+            <main class="col-md-8 col-lg-8 p-4">
+
+                <p class="text-uppercase text-muted small mb-1" style="letter-spacing:.08em;">Linear Programming
+                    &middot; Primal Simplex Method</p>
+                <h2 class="page_title mt-0">Optimal Task Allocation using Modified Primal Simplex for KNUST Cleaning
+                    Staff</h2>
+                <p class="text-muted small mb-4">BSc Project &middot; Department of Mathematics, KNUST &middot;
+                    with Osman Inusah &middot; May 2024</p>
+
+                <!-- Abstract -->
+                <section class="mb-4">
+                    <h3 class="h5 fw-bold">Abstract</h3>
+                    <p class="about-copy">
+                        Cleaning work in a large building is often handed out ad hoc, with no regard for how long
+                        each job takes or how the load is spread across staff. This project builds a
+                        linear-programming model that assigns cleaning tasks to workers across a sequence of time
+                        periods so that the longest period is as short as possible, and solves it with the primal
+                        simplex method. The case study is the Aboagye Menyah Complex at KNUST: 12 workers and 38
+                        room-level cleaning tasks.
+                    </p>
+                </section>
+
+                <!-- Methodology -->
+                <section class="mb-4">
+                    <h3 class="h5 fw-bold">Methodology</h3>
+                    <p class="about-copy">
+                        Task times are estimated from the number of tiles, WCs and sinks in each room, with an
+                        exponential fatigue factor so that later tiles take longer to clean. The model then decides,
+                        for every worker, task and period, whether that assignment is made. Each task is completed
+                        in exactly one period, each worker takes exactly one task in every active period, and tasks
+                        longer than a 40-minute cap are split across several workers, which shortens the task
+                        proportionally. The objective is to minimise the longest time spent in any single period.
+                        Workers are assumed to have uniform skills and to collaborate with perfect efficiency.
+                    </p>
+                </section>
+
+                <!-- Key result -->
+                <section class="mb-5">
+                    <h3 class="h5 fw-bold">Key result</h3>
+                    <p class="about-copy">
+                        For the 12-worker case study, all 38 tasks are completed in five periods totalling 174
+                        minutes, with no single period longer than 39 minutes.
+                    </p>
+                </section>
+
+                <!-- Links -->
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <a href="/reports/task-allocation.pdf" target="_blank" rel="noopener"
+                        class="btn btn-dark">Full report (PDF)</a>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Footer (shared partial) -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Shared partial loader -->
+    <script src="/includes.js"></script>
+</body>
+
+</html>
