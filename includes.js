@@ -32,6 +32,24 @@ function setActiveNavLink() {
   });
 }
 
+// mailto: does nothing without a desktop mail client, so offer a copy button too.
+function wireCopyEmail() {
+  document.querySelectorAll('[data-copy-email]').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copyEmail);
+        btn.textContent = 'Copied';
+      } catch (err) {
+        btn.textContent = 'Press Ctrl+C';
+        window.prompt('Copy email address:', btn.dataset.copyEmail);
+      }
+      setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([
     loadInclude('#site-nav', '/partials/nav.html'),
@@ -39,4 +57,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadInclude('#site-footer', '/partials/footer.html'),
   ]);
   setActiveNavLink();
+  wireCopyEmail();
 });
