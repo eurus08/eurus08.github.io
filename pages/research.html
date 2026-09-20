@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:wght@600;700&display=swap"
         rel="stylesheet">
 
 </head>
@@ -48,7 +48,46 @@
             <main class="col-md-8 col-lg-8 p-4">
                 <h2 class="page_title">Research</h2>
 
-                <p class="text-muted">Content coming soon.</p>
+                <!-- Research interests -->
+<div class="row g-3 mb-5"><div class="col-sm-6 col-lg-4"><div class="interest-card"><b>Scientific Computing</b><span>Turning mathematical models into fast, trustworthy code.</span></div></div><div class="col-sm-6 col-lg-4"><div class="interest-card"><b>Numerical Linear Algebra</b><span>Eigenproblems and factorisations at the core of most simulations.</span></div></div><div class="col-sm-6 col-lg-4"><div class="interest-card"><b>Communication-Avoiding Algorithms</b><span>Trading extra flops for fewer messages and synchronisations.</span></div></div><div class="col-sm-6 col-lg-4"><div class="interest-card"><b>Parallel &amp; HPC</b><span>MPI, OpenMP and CUDA on clusters and GPUs.</span></div></div><div class="col-sm-6 col-lg-4"><div class="interest-card"><b>Krylov Subspace Methods</b><span>Lanczos-type iterations for large sparse eigenproblems.</span></div></div><div class="col-sm-6 col-lg-4"><div class="interest-card"><b>Graph Algorithms &amp; Analysis</b><span>Laplacians, clustering and routing on networks.</span></div></div></div>
+
+                <!-- Current thesis -->
+                <section class="mb-5">
+                    <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
+                        <h3 class="mb-0">A Communication-Avoiding Parallel Spectral Clustering Pipeline</h3>
+                        <span class="badge bg-dark">In progress</span>
+                    </div>
+                    <p class="text-muted small mb-3">MPhil Thesis &middot; NIMS-KNUST &middot; Supervisor: Dr.
+                        Elliot S. Menkah &middot; Jan 2026&ndash;present</p>
+                    <p class="about-copy">
+                        Developing a spectral clustering pipeline for graph Laplacians using a
+                        communication-avoiding Krylov method &mdash; a CA-Lanczos kernel that reduces
+                        synchronisation and global-reduction costs. The classical Lanczos kernel has been
+                        implemented in C and validated for eigenvalue accuracy against SciPy's <code>eigsh</code>
+                        symmetric eigensolver, ahead of extending to the s-step communication-avoiding
+                        formulation.
+                    </p>
+                </section>
+
+                <!-- Research Assistant -->
+                <section class="mb-5">
+                    <h3 class="h5 fw-bold mb-1">Research Assistant</h3>
+                    <p class="text-muted small mb-3">National Institute for Mathematical Sciences (NIMS) &middot;
+                        Jan&ndash;Aug 2024</p>
+                    <p class="about-copy">
+                        Supported ongoing research projects at the institute &mdash; running computational
+                        experiments on the institute's cluster and testing code for correctness ahead of
+                        publication.
+                    </p>
+                </section>
+
+                <p class="about-copy mb-4">
+                    Full research history, presentations, and teaching experience are in my
+                    <a class="btn btn-sm btn-outline-dark" href="/resume/PA_Resume.pdf" target="_blank"
+                        rel="noopener">CV</a>.
+                </p>
+
+                <a class="btn btn-dark" href="/pages/projects.html">View Projects &rarr;</a>
             </main>
 
         </div>
