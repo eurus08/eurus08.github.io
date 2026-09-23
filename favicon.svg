@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>@media (prefers-color-scheme: dark) { rect { fill: #e6e8ea; } text { fill: #121417; } }</style>
   <rect width="64" height="64" rx="14" fill="#212121"/>
   <text x="50%" y="50%" dy="2" font-family="'Roboto','Segoe UI',Arial,sans-serif"
         font-size="34" font-weight="700" fill="#ffffff"

@@ -100,8 +100,8 @@
                             aria-label="Open the live evacuation demo">
                             <svg width="100%" height="160" viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice"
                                 role="img" aria-label="Preview of the Dynamic Evacuation Router interactive demo">
-                                <rect width="400" height="160" fill="#f5f7f9" />
-                                <g stroke="#c7ccd1" stroke-width="1.5">
+                                <rect width="400" height="160" class="svg-bg" />
+                                <g class="svg-edge" stroke-width="1.5">
                                     <line x1="40" y1="120" x2="100" y2="60" />
                                     <line x1="100" y1="60" x2="160" y2="100" />
                                     <line x1="160" y1="100" x2="220" y2="50" />
@@ -111,13 +111,13 @@
                                     <line x1="160" y1="100" x2="200" y2="130" />
                                 </g>
                                 <polyline points="40,120 100,60 160,100 220,50 280,90 340,60" fill="none"
-                                    stroke="#2f6690" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                                <circle cx="40" cy="120" r="6" fill="#212121" />
-                                <circle cx="100" cy="60" r="5" fill="#fff" stroke="#3D3B40" stroke-width="1.5" />
-                                <circle cx="160" cy="100" r="5" fill="#fff" stroke="#3D3B40" stroke-width="1.5" />
-                                <circle cx="220" cy="50" r="5" fill="#fff" stroke="#3D3B40" stroke-width="1.5" />
-                                <circle cx="280" cy="90" r="5" fill="#fff" stroke="#3D3B40" stroke-width="1.5" />
-                                <rect x="330" y="50" width="20" height="20" rx="4" fill="#e6f4ec" stroke="#2e7d5b" stroke-width="1.5" />
+                                    class="svg-route" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="40" cy="120" r="6" class="svg-start" />
+                                <circle cx="100" cy="60" r="5" class="svg-node" stroke-width="1.5" />
+                                <circle cx="160" cy="100" r="5" class="svg-node" stroke-width="1.5" />
+                                <circle cx="220" cy="50" r="5" class="svg-node" stroke-width="1.5" />
+                                <circle cx="280" cy="90" r="5" class="svg-node" stroke-width="1.5" />
+                                <rect x="330" y="50" width="20" height="20" rx="4" class="svg-exit" stroke-width="1.5" />
                             </svg>
                             <span class="demo-chip">Live interactive demo</span>
                         </a>
