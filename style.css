@@ -400,3 +400,30 @@ nav.navbar .nav-link.active {
 .footer-icons i {
   font-size: 1.25rem;
 }
+
+code {
+  color: var(--accent);
+  background: #f5f7f9;
+  padding: .1em .35em;
+  border-radius: .25rem;
+  font-size: .85em;
+}
+
+.figure-plot img {
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: .4rem;
+  background: #fff;
+}
+
+.figure-plot figcaption {
+  font-size: .8rem;
+  color: var(--muted);
+  margin-top: .5rem;
+}
+
+/* Taller charts: cap width and centre */
+.figure-plot.figure-narrow {
+  max-width: 24rem;
+  margin-inline: auto;
+}
