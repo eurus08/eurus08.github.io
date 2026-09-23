@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<script src="/theme.js"></script>
 <title>Dynamic Evacuation Router — Aboagye Menyah Complex</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +18,27 @@
     --exit:#2e7d5b; --start:#212121; --block:#c0392b; --route:#2f6690;
     --accent:#2f6690;
     --edge:rgba(61,59,64,.22);
+    --panel-end:#f8fafb; --panel-glow:rgba(47,102,144,.05); --shadow:rgba(0,0,0,.25);
+    --node-line:#3D3B40; --exit-fill:#e6f4ec; --route-fill:#e8f0f6; --block-fill:#fbe9e7;
+    --warn-line:#e6b8b2; --warn-bg:rgba(240,80,62,.08); --on-accent:#fff;
+  }
+  /* Same palette as the main site; theme.js sets data-bs-theme on <html> */
+  [data-bs-theme="dark"]{
+    color-scheme:dark;
+    --bg:#121417; --panel:#1b1f24; --panel-2:#232930; --line:#2f363d;
+    --grid:rgba(111,168,214,.08);
+    --ink:#e6e8ea; --muted:#9aa5b0; --faint:#7b8691;
+    --node:#1b1f24;
+    --exit:#4fbf8a; --start:#e6e8ea; --block:#e5675a; --route:#6fa8d6;
+    --accent:#6fa8d6;
+    --edge:rgba(201,206,211,.22);
+    --panel-end:#161a1e; --panel-glow:rgba(111,168,214,.07); --shadow:rgba(0,0,0,.6);
+    --node-line:#9aa5b0; --exit-fill:#1d3a2c; --route-fill:#22384a; --block-fill:#3a2321;
+    --warn-line:#6b3a35; --warn-bg:rgba(229,103,90,.12); --on-accent:#121417;
   }
   *{box-sizing:border-box}
-  body{margin:0; background:#fff}
+  body{margin:0; background:var(--bg)}
   .er-wrap{
-    --faint:#8a949e;
     font-family:'Roboto',system-ui,sans-serif;
     color:var(--ink);
     max-width:1120px; margin:0 auto; padding:14px;
@@ -29,9 +47,9 @@
   .er-panel{
     position:relative; border:1px solid var(--line); border-radius:16px; overflow:hidden;
     background:
-      radial-gradient(1200px 500px at 78% -10%, rgba(47,102,144,.05), transparent 60%),
-      linear-gradient(180deg,#ffffff,#f8fafb);
-    box-shadow:0 8px 24px -16px rgba(0,0,0,.25);
+      radial-gradient(1200px 500px at 78% -10%, var(--panel-glow), transparent 60%),
+      linear-gradient(180deg,var(--panel),var(--panel-end));
+    box-shadow:0 8px 24px -16px var(--shadow);
   }
   .er-head{
     display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px;
@@ -70,17 +88,17 @@
   .node{cursor:pointer; transform-box:fill-box; transform-origin:center;
     transition:transform .18s ease}
   .node:hover{transform:scale(1.16)}
-  .node circle{fill:var(--node); stroke:#3D3B40; stroke-width:1.5; transition:fill .2s,stroke .2s}
-  .node text{fill:#3D3B40; font-size:12px; font-weight:500; text-anchor:middle;
+  .node circle{fill:var(--node); stroke:var(--node-line); stroke-width:1.5; transition:fill .2s,stroke .2s}
+  .node text{fill:var(--node-line); font-size:12px; font-weight:500; text-anchor:middle;
     dominant-baseline:central; pointer-events:none; user-select:none}
-  .node.exit rect{fill:#e6f4ec; stroke:var(--exit); stroke-width:1.8; rx:4}
+  .node.exit rect{fill:var(--exit-fill); stroke:var(--exit); stroke-width:1.8; rx:4}
   .node.exit text{fill:var(--exit); font-weight:600; font-size:11px}
   .node.start circle{fill:var(--start); stroke:var(--start)}
-  .node.start text{fill:#fff; font-weight:600}
-  .node.onroute circle{stroke:var(--route); stroke-width:2.4; fill:#e8f0f6}
+  .node.start text{fill:var(--on-accent); font-weight:600}
+  .node.onroute circle{stroke:var(--route); stroke-width:2.4; fill:var(--route-fill)}
   .node.blocked{cursor:pointer}
-  .node.blocked circle{fill:#fbe9e7; stroke:var(--block); stroke-width:2}
-  .node.blocked text{fill:#c0392b}
+  .node.blocked circle{fill:var(--block-fill); stroke:var(--block); stroke-width:2}
+  .node.blocked text{fill:var(--block)}
   .pulse{fill:none; stroke:var(--start); stroke-width:2; opacity:0; transform-box:fill-box;
     transform-origin:center}
   .pulse.on{animation:ping 1.8s ease-out infinite}
@@ -99,8 +117,8 @@
     font-family:inherit; font-size:12.5px; font-weight:500; padding:10px 8px; cursor:pointer;
     transition:.18s; letter-spacing:.02em}
   .seg button+button{border-left:1px solid var(--line)}
-  .seg button[aria-pressed="true"]{color:#fff; background:var(--accent); font-weight:600}
-  .seg button.block-mode[aria-pressed="true"]{background:var(--block); color:#fff}
+  .seg button[aria-pressed="true"]{color:var(--on-accent); background:var(--accent); font-weight:600}
+  .seg button.block-mode[aria-pressed="true"]{background:var(--block); color:var(--on-accent)}
 
   select,.btn{width:100%; font-family:inherit; font-size:13px; color:var(--ink);
     background:var(--panel-2); border:1px solid var(--line); border-radius:10px; padding:10px 12px; cursor:pointer}
@@ -110,7 +128,7 @@
 
   .readout{border:1px solid var(--line); border-radius:12px; background:
     linear-gradient(180deg,rgba(255,255,255,.02),transparent); padding:14px 15px}
-  .readout.warn{border-color:#e6b8b2; background:linear-gradient(180deg,rgba(240,80,62,.08),transparent)}
+  .readout.warn{border-color:var(--warn-line); background:linear-gradient(180deg,var(--warn-bg),transparent)}
   .ro-top{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
   .ro-exit{font-family:'Roboto',sans-serif; font-weight:700; font-size:30px; line-height:1; color:var(--exit)}
   .ro-exit.warn{color:var(--block)}
