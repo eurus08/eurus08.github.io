@@ -526,15 +526,26 @@ code {
   --bs-dropdown-link-hover-bg: var(--surface-2);
 }
 
-/* Buttons: the "dark" buttons become light-on-dark */
+/* Buttons: the "dark" buttons become light-on-dark.
+   Bootstrap's CSS loads after this file, so every token is set here at higher specificity. */
 [data-bs-theme="dark"] .btn-dark {
   --bs-btn-color: var(--bg);
+  --bs-btn-bg: var(--ink);
+  --bs-btn-border-color: var(--ink);
   --bs-btn-hover-color: var(--bg);
+  --bs-btn-hover-bg: var(--accent);
+  --bs-btn-hover-border-color: var(--accent);
   --bs-btn-active-color: var(--bg);
+  --bs-btn-active-bg: var(--accent);
+  --bs-btn-active-border-color: var(--accent);
 }
 
 [data-bs-theme="dark"] .btn-outline-dark {
+  --bs-btn-color: var(--ink);
+  --bs-btn-border-color: var(--btn-border);
   --bs-btn-hover-color: var(--bg);
+  --bs-btn-hover-bg: var(--ink);
+  --bs-btn-hover-border-color: var(--ink);
   --bs-btn-active-color: var(--bg);
   --bs-btn-active-bg: var(--ink);
   --bs-btn-active-border-color: var(--ink);
