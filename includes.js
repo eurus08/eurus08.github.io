@@ -50,6 +50,22 @@ function wireCopyEmail() {
   });
 }
 
+// Wires the nav's light/dark button (theme.js does the actual switching).
+function wireThemeToggle() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn || !window.siteTheme) return;
+  const icon = btn.querySelector('i');
+  const sync = () => {
+    const dark = window.siteTheme.get() === 'dark';
+    btn.setAttribute('aria-pressed', String(dark));
+    btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    icon.className = 'bi ' + (dark ? 'bi-sun-fill' : 'bi-moon-stars-fill');
+  };
+  btn.addEventListener('click', () => window.siteTheme.toggle());
+  document.addEventListener('themechange', sync);
+  sync();
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([
     loadInclude('#site-nav', '/partials/nav.html'),
@@ -58,4 +74,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   ]);
   setActiveNavLink();
   wireCopyEmail();
+  wireThemeToggle();
 });
