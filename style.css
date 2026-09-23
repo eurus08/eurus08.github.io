@@ -473,8 +473,9 @@ code {
 
 
 /* ========== Dark theme ========== */
-/* Set on <html data-bs-theme="dark"> by theme.js; Bootstrap 5.3 handles its own components. */
-[data-bs-theme="dark"] {
+/* Set on <html data-bs-theme="dark"> by theme.js; Bootstrap 5.3 handles its own components.
+   `:root[...]` outranks Bootstrap's own [data-bs-theme="dark"] block, which loads after this file. */
+:root[data-bs-theme="dark"] {
   color-scheme: dark;
 
   --bg: #121417;
@@ -505,11 +506,19 @@ code {
 
 /* Navbar */
 [data-bs-theme="dark"] .navbar-toggler {
-  border-color: var(--rule-strong);
+  color: var(--ink);
+  border-color: var(--btn-border);
 }
 
+[data-bs-theme="dark"] .navbar-toggler:hover,
+[data-bs-theme="dark"] .navbar-toggler:focus-visible {
+  border-color: var(--accent);
+}
+
+/* Bootstrap's hamburger is a dark, 75%-opaque SVG; use a solid light one */
 [data-bs-theme="dark"] .navbar-toggler-icon {
-  filter: invert(1);
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e6e8ea' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: var(--bs-navbar-toggler-icon-bg);
 }
 
 /* Cards and dropdowns (sidebar contact menu) */
@@ -564,4 +573,43 @@ code {
 [data-bs-theme="dark"] .figure-plot img {
   background: #fff;
   filter: invert(.92) hue-rotate(180deg);
+}
+
+
+/* Print on paper: always use the light palette */
+@media print {
+  :root[data-bs-theme="dark"] {
+    color-scheme: light;
+    --bg: #fff;
+    --bg-alt: #f8f9fa;
+    --surface: #fff;
+    --surface-2: #f5f7f9;
+    --ink: #212121;
+    --ink-strong: #000;
+    --ink-2: #3a3a3a;
+    --muted: #5f6b76;
+    --accent: #2f6690;
+    --rule: #dcdfe3;
+    --rule-strong: #c7ccd1;
+    --btn-border: #9aa3ab;
+    --chip-bg: rgba(255, 255, 255, .92);
+    --shadow: rgba(0, 0, 0, .2);
+    --node-stroke: #3d3b40;
+    --exit: #2e7d5b;
+    --exit-fill: #e6f4ec;
+    --block: #c0392b;
+    --bs-body-bg: #fff;
+    --bs-body-color: #212121;
+    --bs-secondary-color: #5f6b76;
+    --bs-border-color: #dcdfe3;
+  }
+
+  [data-bs-theme="dark"] .icon > img,
+  [data-bs-theme="dark"] .figure-plot img {
+    filter: none;
+  }
+
+  nav.navbar .theme-toggle {
+    display: none;
+  }
 }
