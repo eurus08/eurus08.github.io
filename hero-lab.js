@@ -167,6 +167,8 @@
 
     fit();
     window.addEventListener('resize', function () { fit(); render(); });
+    // The animation loop picks up new colours by itself; the static render needs a nudge.
+    document.addEventListener('themechange', function () { if (reduced) render(); });
     if (reduced) {
         render();
     } else {
