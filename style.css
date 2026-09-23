@@ -454,3 +454,77 @@ code {
   max-width: 24rem;
   margin-inline: auto;
 }
+
+
+/* ========== Dark theme ========== */
+/* Set on <html data-bs-theme="dark"> by theme.js; Bootstrap 5.3 handles its own components. */
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #121417;
+  --bg-alt: #161a1e;
+  --surface: #1b1f24;
+  --surface-2: #232930;
+  --ink: #e6e8ea;
+  --ink-strong: #fff;
+  --ink-2: #c9ced3;
+  --muted: #9aa5b0;
+  --accent: #6fa8d6;
+  --rule: #2f363d;
+  --rule-strong: #454d55;
+  --btn-border: #59636c;
+  --chip-bg: rgba(27, 31, 36, .92);
+  --shadow: rgba(0, 0, 0, .6);
+
+  /* Point Bootstrap's own tokens at the site palette */
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--ink);
+  --bs-secondary-color: var(--muted);
+  --bs-border-color: var(--rule);
+}
+
+/* Navbar */
+[data-bs-theme="dark"] .navbar-toggler {
+  border-color: var(--rule-strong);
+}
+
+[data-bs-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Cards and dropdowns (sidebar contact menu) */
+[data-bs-theme="dark"] .card {
+  --bs-card-bg: var(--surface);
+  --bs-card-color: var(--ink);
+}
+
+[data-bs-theme="dark"] .dropdown-menu {
+  --bs-dropdown-bg: var(--surface);
+  --bs-dropdown-color: var(--ink);
+  --bs-dropdown-border-color: var(--rule);
+  --bs-dropdown-link-color: var(--ink);
+  --bs-dropdown-link-hover-bg: var(--surface-2);
+}
+
+/* Buttons: the "dark" buttons become light-on-dark */
+[data-bs-theme="dark"] .btn-dark {
+  --bs-btn-color: var(--bg);
+  --bs-btn-hover-color: var(--bg);
+  --bs-btn-active-color: var(--bg);
+}
+
+[data-bs-theme="dark"] .btn-outline-dark {
+  --bs-btn-hover-color: var(--bg);
+  --bs-btn-active-color: var(--bg);
+  --bs-btn-active-bg: var(--ink);
+  --bs-btn-active-border-color: var(--ink);
+}
+
+[data-bs-theme="dark"] .badge.bg-dark {
+  color: var(--bg);
+}
+
+/* Chart PNGs are drawn on white; keep them readable until Phase 4 */
+[data-bs-theme="dark"] .figure-plot img {
+  background: #fff;
+}
