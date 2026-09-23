@@ -60,7 +60,17 @@
 <div class="col-md-7"><p class="meta mb-1"><b>2024</b> &middot; Linear programming &middot; Primal simplex</p><h3 class="serif h4 mb-2">Optimal Task Allocation</h3><p class="about-copy mb-2" style="font-size:.95rem">Assigns KNUST cleaning-staff tasks across time periods to minimise the longest period.</p>
 <p class="mb-3"><span class="topic-tag mb-0">5 periods &middot; 174 min</span></p><div class="d-flex flex-wrap gap-2"><a class="btn btn-sm btn-dark" href="/pages/projects/task-allocation.html">View project &rarr;</a> <a class="btn btn-sm btn-outline-dark" href="/reports/task-allocation.pdf" target="_blank" rel="noopener">Report (PDF)</a></div></div></div></div></section>
 <section id="software" class="mt-5"><h3 class="serif h4 mb-3">Software</h3>
-<div class="panel d-flex flex-wrap justify-content-between align-items-start gap-3"><div><b>hpc-kernels</b> <span class="meta">C &middot; OpenMP &middot; MPI &middot; CUDA</span><p class="about-copy mb-1" style="font-size:.95rem">Reduction, matmul, mat-vec, Gaussian elimination, transpose and Jacobi across serial, OpenMP, MPI and CUDA; checked against NumPy/SciPy and benchmarked in GFLOP/s and GB/s.</p></div><a class="btn btn-sm btn-outline-dark" href="https://github.com/eurus08/hpc-kernels" target="_blank" rel="noopener">GitHub &#8599;</a></div>
+<div class="panel">
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-2"><div><h4 class="serif h5 mb-1">hpc-kernels</h4><span class="meta">C &middot; OpenMP &middot; MPI &middot; CUDA</span></div><a class="btn btn-sm btn-outline-dark" href="https://github.com/eurus08/hpc-kernels" target="_blank" rel="noopener">GitHub &#8599;</a></div>
+<p class="about-copy" style="font-size:.95rem">Reduction, matrix multiply, mat-vec, Gaussian elimination, transpose and Jacobi written from scratch across serial, OpenMP, MPI and CUDA, checked against NumPy/SciPy and benchmarked in GFLOP/s and GB/s.</p>
+<figure class="figure-plot figure-narrow mb-0"><img src="/images/projects/hpc-openmp-speedup.png" alt="Line chart of OpenMP speedup against thread count for matmul, reduction and transpose, with the ideal linear speedup dashed" loading="lazy"><figcaption>OpenMP speedup versus thread count. Reduction scales best; transpose is limited by memory bandwidth.</figcaption></figure>
+</div>
+<div class="panel mt-4">
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-2"><div><h4 class="serif h5 mb-1">line1</h4><span class="meta">C11 &middot; CMake &middot; AVX2/NEON &middot; MPI</span></div><a class="btn btn-sm btn-outline-dark" href="https://github.com/eurus08/line1" target="_blank" rel="noopener">GitHub &#8599;</a></div>
+<p class="about-copy" style="font-size:.95rem">The six BLAS Level 1 operations written from scratch with strided access, Kahan-compensated summation and an overflow-safe <code>nrm2</code>, plus SIMD kernels and an MPI layer.</p>
+<figure class="figure-plot mb-0"><img src="/images/projects/line1-strong-scaling.png" alt="Two charts of MPI strong scaling for the dot product: time and speedup against rank count, with speedup far below the ideal line" loading="lazy"><figcaption>MPI strong scaling of <code>dot</code>. Speedup peaks near 1.5&times; because the kernel is memory-bandwidth-bound.</figcaption></figure>
+</div>
+<p class="mt-4 mb-0"><a href="https://github.com/eurus08/" target="_blank" rel="noopener">Explore more on GitHub &#8599;</a></p>
 </section>
 </main>
 
