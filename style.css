@@ -72,26 +72,16 @@ nav {
   letter-spacing: -.01em;
 }
 
-.node-graphic line {
-  stroke: #c7ccd1;
-  stroke-width: 1.5;
+.hero-lab canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
 }
 
-.node-graphic .route {
-  stroke: #2f6690;
-  stroke-width: 2.5;
-  fill: none;
-}
-
-.node-graphic circle {
-  fill: #fff;
-  stroke: #3D3B40;
-  stroke-width: 1.5;
-}
-
-.node-graphic circle.on-route {
-  fill: #2f6690;
-  stroke: #2f6690;
+.hero-lab canvas:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .about-copy {

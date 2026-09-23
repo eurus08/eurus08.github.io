@@ -62,33 +62,10 @@
                         </div>
                     </div>
                     <div class="col-md-5 text-center">
-                        <svg class="node-graphic" viewBox="0 0 240 220" width="100%" height="auto" role="img"
-                            aria-label="Abstract illustration of a node graph, with one path highlighted">
-                            <g>
-                                <line x1="30" y1="110" x2="70" y2="170" />
-                                <line x1="70" y1="170" x2="120" y2="90" />
-                                <line x1="70" y1="170" x2="120" y2="150" />
-                                <line x1="120" y1="150" x2="170" y2="110" />
-                                <line x1="120" y1="150" x2="170" y2="180" />
-                                <line x1="170" y1="180" x2="210" y2="90" />
-                                <line x1="170" y1="40" x2="210" y2="90" />
-                                <line x1="120" y1="90" x2="170" y2="40" />
-                            </g>
-                            <polyline class="route" points="30,110 70,50 120,90 170,110 210,90" />
-                            <g>
-                                <circle cx="70" cy="170" r="7" />
-                                <circle cx="120" cy="150" r="7" />
-                                <circle cx="170" cy="40" r="7" />
-                                <circle cx="170" cy="180" r="7" />
-                            </g>
-                            <g>
-                                <circle class="on-route" cx="30" cy="110" r="7" />
-                                <circle class="on-route" cx="70" cy="50" r="7" />
-                                <circle class="on-route" cx="120" cy="90" r="7" />
-                                <circle class="on-route" cx="170" cy="110" r="7" />
-                                <circle class="on-route" cx="210" cy="90" r="7" />
-                            </g>
-                        </svg>
+                        <div id="hero-lab" class="hero-lab">
+                            <canvas width="340" height="290" tabindex="0" role="img"
+                                aria-label="Ambient diagram of a small computing cluster: nodes flicker with local computation and a synchronisation wave occasionally ripples across the network. Click to trigger a ripple."></canvas>
+                        </div>
                     </div>
                 </div>
 
@@ -166,6 +143,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Shared partial loader -->
+        <script src="/hero-lab.js"></script>
     <script src="/includes.js"></script>
 </body>
 
