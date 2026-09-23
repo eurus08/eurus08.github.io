@@ -1,21 +1,9 @@
 /* Nav Bar Style */
 .pages a {
-  color: #000;
+  color: var(--ink-strong);
   text-decoration: none;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
-
-.pages a:hover {
-  color: #3D3B40;
-  border-bottom: 5px solid #3D3B40;
-  /* underline effect */
-}
-
-
-nav {
-  border-bottom: 1px solid #bfbfbf;
-}
-
 
 /* Side bar style: see "Partials" section at the end */
 
@@ -26,7 +14,7 @@ nav {
 }
 
 .page_title {
-  color: #212121;
+  color: var(--ink);
   padding: 2px;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -40,7 +28,7 @@ nav {
 
 /* Fun Facts Section (Alternating Layout) */
 #fun-facts {
-  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
 }
 
 #fun-facts img {
@@ -49,7 +37,7 @@ nav {
 
 #fun-facts img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 25px var(--shadow);
 }
 
 /* Space between alternating rows */
@@ -82,19 +70,19 @@ nav {
 .about-copy {
   font-size: 1.05rem;
   line-height: 1.65;
-  color: #3a3a3a;
+  color: var(--ink-2);
   text-align: start;
 }
 
 .topic-tag {
   display: inline-block;
-  border: 1px solid #c7ccd1;
+  border: 1px solid var(--rule-strong);
   border-radius: 999px;
   padding: .35rem .9rem;
   font-size: .85rem;
   margin: .25rem .25rem .25rem 0;
-  color: #333;
-  background: #fff;
+  color: var(--ink-2);
+  background: var(--surface);
 }
 
 .demo-thumb-link {
@@ -115,9 +103,9 @@ nav {
   position: absolute;
   left: 12px;
   bottom: 12px;
-  background: rgba(255, 255, 255, .92);
-  border: 1px solid #dcdfe3;
-  color: #2f6690;
+  background: var(--chip-bg);
+  border: 1px solid var(--rule);
+  color: var(--accent);
   font-family: 'Roboto', system-ui, sans-serif;
   font-size: .7rem;
   padding: .25rem .6rem;
@@ -138,24 +126,24 @@ nav {
 }
 
 .panel {
-  border: 1px solid #dcdfe3;
+  border: 1px solid var(--rule);
   border-radius: .6rem;
   padding: 1.5rem;
-  background: #fff;
+  background: var(--surface);
 }
 
 .meta {
   font-size: .8rem;
-  color: #5f6b76;
+  color: var(--muted);
 }
 
 .meta b {
-  color: #212121;
+  color: var(--ink);
   font-weight: 500;
 }
 
 .thumb {
-  background: #f5f7f9;
+  background: var(--surface-2);
   border-radius: .6rem;
   overflow: hidden;
 }
@@ -167,7 +155,7 @@ nav {
 }
 
 .interest-card {
-  border: 1px solid #dcdfe3;
+  border: 1px solid var(--rule);
   border-radius: .6rem;
   padding: 1rem;
   height: 100%;
@@ -176,32 +164,43 @@ nav {
 .interest-card b {
   display: block;
   margin-bottom: .25rem;
-  color: #212121;
+  color: var(--ink);
 }
 
 .interest-card span {
   font-size: .85rem;
-  color: #5f6b76;
+  color: var(--muted);
 }
 
 .kicker {
   text-transform: uppercase;
   letter-spacing: .08em;
   font-size: .72rem;
-  color: #5f6b76;
+  color: var(--muted);
 }
 
 
 /* ========== Site-wide polish ========== */
 :root {
+  --bg: #fff;
+  --bg-alt: #f8f9fa;
+  --surface: #fff;
+  --surface-2: #f5f7f9;
   --ink: #212121;
+  --ink-strong: #000;
+  --ink-2: #3a3a3a;
   --muted: #5f6b76;
   --accent: #2f6690;
   --rule: #dcdfe3;
+  --rule-strong: #c7ccd1;
+  --btn-border: #9aa3ab;
+  --chip-bg: rgba(255, 255, 255, .92);
+  --shadow: rgba(0, 0, 0, .2);
 }
 
 body {
   font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
 }
@@ -249,7 +248,7 @@ main a:not(.btn):not(.topic-tag):hover {
 
 .btn-outline-dark {
   --bs-btn-color: var(--ink);
-  --bs-btn-border-color: #9aa3ab;
+  --bs-btn-border-color: var(--btn-border);
   --bs-btn-hover-bg: var(--ink);
   --bs-btn-hover-border-color: var(--ink);
 }
@@ -261,7 +260,7 @@ main a:not(.btn):not(.topic-tag):hover {
 
 /* Quieter nav */
 nav.navbar {
-  background-color: #fff !important;
+  background-color: var(--surface) !important;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -364,7 +363,7 @@ nav.navbar .nav-link.active {
 
 .copy-btn {
   border: 1px solid var(--rule);
-  background: #fff;
+  background: var(--surface);
   color: var(--muted);
   border-radius: .3rem;
   font-size: .72rem;
@@ -378,7 +377,7 @@ nav.navbar .nav-link.active {
 }
 
 #footer-sec {
-  background: #fff;
+  background: var(--surface);
   border-top: 1px solid var(--rule);
   color: var(--muted);
 }
@@ -398,7 +397,7 @@ nav.navbar .nav-link.active {
 
 code {
   color: var(--accent);
-  background: #f5f7f9;
+  background: var(--surface-2);
   padding: .1em .35em;
   border-radius: .25rem;
   font-size: .85em;
@@ -408,7 +407,7 @@ code {
   width: 100%;
   border: 1px solid var(--rule);
   border-radius: .4rem;
-  background: #fff;
+  background: var(--surface);
 }
 
 .figure-plot figcaption {
